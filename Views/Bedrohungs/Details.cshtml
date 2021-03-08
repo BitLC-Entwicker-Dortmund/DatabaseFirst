@@ -1,0 +1,36 @@
+﻿@model DatabaseFirst.Models.Bedrohung
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bedrohung</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bedrohungsbezeichnung)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bedrohungsbezeichnung)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Agressor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Agressor.AgressorEigenschaft)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Held)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Held.HeldEigenschaft)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.BedrohungId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

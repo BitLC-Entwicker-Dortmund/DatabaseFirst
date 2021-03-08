@@ -1,0 +1,30 @@
+﻿@model DatabaseFirst.Models.Agressor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Agressor</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AgressorName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AgressorName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AgressorEigenschaft)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AgressorEigenschaft)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AgressorId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,43 @@
+﻿@model DatabaseFirst.Models.Held
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Held</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HeldId" class="control-label"></label>
+                <input asp-for="HeldId" class="form-control" />
+                <span asp-validation-for="HeldId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeldName" class="control-label"></label>
+                <input asp-for="HeldName" class="form-control" />
+                <span asp-validation-for="HeldName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeldEigenschaft" class="control-label"></label>
+                <input asp-for="HeldEigenschaft" class="form-control" />
+                <span asp-validation-for="HeldEigenschaft" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
